@@ -1,0 +1,40 @@
+.page-header {
+  display: block;
+  padding: 1em;
+  background: lightgray;
+}
+.content-container {
+}
+.content-container:after {
+  content: " ";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.content-section {
+  /* right */
+  float: left;
+  padding: 1em;
+  font-size: 1rem;
+  /* root em */
+  /* 16px */
+}
+.content-section-a {
+  width: calc(30% - 2em);
+  background: yellow;
+}
+.content-section-b {
+  width: calc(70% - 2em);
+  background: pink;
+}
+.page-footer {
+  /* clear:left; */
+  padding: 1em;
+  background: yellowgreen;
+}
+.global-menu-link {
+  display: block;
+  margin-bottom: 5px;
+  background: white;
+}
