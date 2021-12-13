@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var x, y, z;
+    x = 10;
+    y = 20;
+    z = '10';
+
+    document.write(x > y, '<br>');
+    document.write(x < y, '<br>');
+    document.write(x >= y, '<br>');
+    document.write(x <= y, '<br>');
+
+    document.write(`x == z : ${x == z} <br>`); //숫자와 문자를 구별하지 않고 비교
+    document.write(`x === z : ${x === z} <br>`); //숫자와 문자를 구별하고 비교
+    document.write(`x != y : ${x != y} <br>`);
+  </script>
+</body>
+</html>
