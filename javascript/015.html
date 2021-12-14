@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>015.html</title>
+</head>
+<body>
+  <script>
+    //String
+    let txt = 'ABCDEFGHIJKABC';
+    let txt_two = 'mom said \'hello world\'';
+
+    document.write(`txt : ${txt} <br>`);
+    document.write(`txt.length : ${txt.length} <br>`);
+    document.write(`txt[1] : ${txt[1]} <br>`);
+    document.write(`txt_two : ${txt_two} <br>`);
+
+    document.write(`txt.indexOf : ${txt.indexOf("F")} <br>`);
+    document.write(`txt.serch : ${txt.search("F")} <br>`); //serch : 검색기능(맨앞에 있는 위치) 만약 ABC를 검색하면 ABC 중 가장 앞에 찾는 위치를 나타냄.
+    document.write(`txt.lastIndexOf : ${txt.lastIndexOf("F")} <br>`);
+    document.write(`txt.slice(0, 3) : ${txt.slice(0, 3)} <br>`);
+    document.write(`txt.substring(0, 3) : ${txt.substring(0, 3)} <br>`);
+    document.write(`txt.substr(2, 5) : ${txt.substr(2, 5)} <br>`);
+    document.write(`txt.replace('ABC', 'hojun') : ${txt.replace('ABC', 'hojun')} <br>`);
+
+    //정규표현식에서 한 번 더 다룸
+    document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')} <br>`);
+    document.write(`txt.toUpperCase() : ${txt.toUpperCase()} <br>`);
+    document.write(`txt.toLowerCase() : ${txt.toLowerCase()} <br>`);
+  </script>
+</body>
+</html>
