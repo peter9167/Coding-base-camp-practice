@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>연습문제1.html</title>
+</head>
+<body>
+  <script>
+    // 연습문제 1
+    // 다음 str에 평균값을 구하세요 : '5,4,10,2,5'
+    let s = prompt();
+    let splitS = s.split(',');
+    console.log(splitS);
+    let sum = 0;
+    for(var variable of splitS){
+      sum += parseInt(variable, 10);
+    }
+    console.log(sum/splitS.length);
+  </script>
+</body>
+</html>
