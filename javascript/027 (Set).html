@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>027.html</title>
+</head>
+<body>
+  <script>
+    // Map, Set
+    let s = new Set('abcdeeeeeeeeee');
+    console.log(s.size); //중복된 값을 포함하지 않은 값의 개수
+    s.add('f'); //추가(+)
+    console.log(s);
+    for (var variable of s) {
+      console.log(variable);
+    }
+    let ss = new Set('abcdeeeeeeeeee'.split(''));
+    console.log(ss); //중복된 값을 포함하지 않은 값의 개수
+    ss.delete('b')
+    console.log(ss.has('a'));
+    console.log(ss);
+    // ss.clear //배열 삭제
+  </script>
+</body>
+</html>
