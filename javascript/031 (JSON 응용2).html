@@ -6,17 +6,17 @@
 <body>
   <button onclick="renderTable(jsonData)">데이터 호출!</button>
   <table id="renderingDataTable">
-    <thread>
+    <thead>
       <tr>
-        <th>_id</th>
-        <th>age</th>
-        <th>eyeColor</th>
-        <th>name</th>
-        <th>gender</th>
-        <th>email</th>
-        <th>phone</th>
+        <th onclick="sort('_id')">_id</th>
+        <th onclick="sort('age')">age</th>
+        <th onclick="sort('eyeColor')">eyeColor</th>
+        <th onclick="sort('name')">name</th>
+        <th onclick="sort('gender')">gender</th>
+        <th onclick="sort('email')">email</th>
+        <th onclick="sort('phone')">phone</th>
       </tr>
-    </thread>
+    </thead>
     <tbody></tbody>
   </table>
   <script>
@@ -34,277 +34,256 @@
     //   }
     // ]
   var jsonData = [
-  {
-    "_id": "61c3f1748d548c4835812340",
-    "age": 36,
-    "eyeColor": "green",
-    "name": "Clements Fuller",
-    "gender": "male",
-    "email": "clementsfuller@illumity.com",
-    "phone": "+1 (893) 492-2899"
-  },
-  {
-    "_id": "61c3f174c5d2ffcc89ae8205",
-    "age": 36,
-    "eyeColor": "green",
-    "name": "Molina Bond",
-    "gender": "male",
-    "email": "molinabond@illumity.com",
-    "phone": "+1 (939) 570-3462"
-  },
-  {
-    "_id": "61c3f1747baf80952125132c",
-    "age": 38,
-    "eyeColor": "brown",
-    "name": "Mcclure Nunez",
-    "gender": "male",
-    "email": "mcclurenunez@illumity.com",
-    "phone": "+1 (966) 496-2349"
-  },
-  {
-    "_id": "61c3f17493c9046de7b00523",
-    "age": 35,
-    "eyeColor": "green",
-    "name": "William Mooney",
-    "gender": "male",
-    "email": "williammooney@illumity.com",
-    "phone": "+1 (917) 446-2259"
-  },
-  {
-    "_id": "61c3f17410c49b866484d59c",
-    "age": 23,
-    "eyeColor": "brown",
-    "name": "Kimberly Case",
-    "gender": "female",
-    "email": "kimberlycase@illumity.com",
-    "phone": "+1 (854) 561-3055"
-  },
-  {
-    "_id": "61c3f1743d1a7ed991b5a12d",
-    "age": 40,
-    "eyeColor": "green",
-    "name": "Amy Hopper",
-    "gender": "female",
-    "email": "amyhopper@illumity.com",
-    "phone": "+1 (840) 548-2913"
-  },
-  {
-    "_id": "61c3f1749200a1938233a7f8",
-    "age": 27,
-    "eyeColor": "green",
-    "name": "Adams Mcconnell",
-    "gender": "male",
-    "email": "adamsmcconnell@illumity.com",
-    "phone": "+1 (905) 429-3883"
-  },
-  {
-    "_id": "61c3f174be990e6fe46a3f60",
-    "age": 25,
-    "eyeColor": "green",
-    "name": "Banks Clark",
-    "gender": "male",
-    "email": "banksclark@illumity.com",
-    "phone": "+1 (971) 472-2099"
-  },
-  {
-    "_id": "61c3f1742f98ed58058941da",
-    "age": 31,
-    "eyeColor": "blue",
-    "name": "Kathleen Sears",
-    "gender": "female",
-    "email": "kathleensears@illumity.com",
-    "phone": "+1 (862) 541-2491"
-  },
-  {
-    "_id": "61c3f1745a0269486374d379",
-    "age": 27,
-    "eyeColor": "blue",
-    "name": "Rhea Dickson",
-    "gender": "female",
-    "email": "rheadickson@illumity.com",
-    "phone": "+1 (990) 419-3299"
-  },
-  {
-    "_id": "61c3f1744013a5fbadf69f66",
-    "age": 29,
-    "eyeColor": "brown",
-    "name": "Vega Roberts",
-    "gender": "male",
-    "email": "vegaroberts@illumity.com",
-    "phone": "+1 (816) 461-2237"
-  },
-  {
-    "_id": "61c3f174282a317719de3c18",
-    "age": 40,
-    "eyeColor": "green",
-    "name": "Willie Frederick",
-    "gender": "female",
-    "email": "williefrederick@illumity.com",
-    "phone": "+1 (901) 471-2181"
-  },
-  {
-    "_id": "61c3f174d05d25a44c1a39a7",
-    "age": 21,
-    "eyeColor": "blue",
-    "name": "Holt Shaffer",
-    "gender": "male",
-    "email": "holtshaffer@illumity.com",
-    "phone": "+1 (932) 515-2978"
-  },
-  {
-    "_id": "61c3f174a8de4391fe7fe48f",
-    "age": 24,
-    "eyeColor": "blue",
-    "name": "Wolf Oneill",
-    "gender": "male",
-    "email": "wolfoneill@illumity.com",
-    "phone": "+1 (807) 510-3358"
-  },
-  {
-    "_id": "61c3f174268ad25563a1cd79",
-    "age": 27,
-    "eyeColor": "brown",
-    "name": "Marietta Gregory",
-    "gender": "female",
-    "email": "mariettagregory@illumity.com",
-    "phone": "+1 (967) 577-2089"
-  },
-  {
-    "_id": "61c3f174741a531e2b0e76c4",
-    "age": 35,
-    "eyeColor": "brown",
-    "name": "Wheeler Potts",
-    "gender": "male",
-    "email": "wheelerpotts@illumity.com",
-    "phone": "+1 (975) 413-3410"
-  },
-  {
-    "_id": "61c3f1749c58129e3dbec6ab",
-    "age": 22,
-    "eyeColor": "brown",
-    "name": "Castro Wallace",
-    "gender": "male",
-    "email": "castrowallace@illumity.com",
-    "phone": "+1 (932) 457-2470"
-  },
-  {
-    "_id": "61c3f1748689fe16e22d1a9e",
-    "age": 34,
-    "eyeColor": "green",
-    "name": "Tia Mccarty",
-    "gender": "female",
-    "email": "tiamccarty@illumity.com",
-    "phone": "+1 (919) 424-3462"
-  },
-  {
-    "_id": "61c3f174ac1fd93093d1aff2",
-    "age": 35,
-    "eyeColor": "brown",
-    "name": "Martinez Lane",
-    "gender": "male",
-    "email": "martinezlane@illumity.com",
-    "phone": "+1 (877) 514-3178"
-  },
-  {
-    "_id": "61c3f17478d64dca2ef7480c",
-    "age": 20,
-    "eyeColor": "green",
-    "name": "Rhonda Hartman",
-    "gender": "female",
-    "email": "rhondahartman@illumity.com",
-    "phone": "+1 (964) 459-3187"
-  },
-  {
-    "_id": "61c3f174aad416365a48b317",
-    "age": 40,
-    "eyeColor": "blue",
-    "name": "Hodges Taylor",
-    "gender": "male",
-    "email": "hodgestaylor@illumity.com",
-    "phone": "+1 (821) 489-3597"
-  },
-  {
-    "_id": "61c3f17459ac26e01609ee47",
-    "age": 34,
-    "eyeColor": "brown",
-    "name": "Ellis Lester",
-    "gender": "male",
-    "email": "ellislester@illumity.com",
-    "phone": "+1 (838) 597-2785"
-  },
-  {
-    "_id": "61c3f17481b801ae824ba510",
-    "age": 35,
-    "eyeColor": "blue",
-    "name": "Contreras Cochran",
-    "gender": "male",
-    "email": "contrerascochran@illumity.com",
-    "phone": "+1 (913) 525-2063"
-  },
-  {
-    "_id": "61c3f174ab7bc75ae067b373",
-    "age": 36,
-    "eyeColor": "blue",
-    "name": "Billie Cash",
-    "gender": "female",
-    "email": "billiecash@illumity.com",
-    "phone": "+1 (828) 443-2214"
-  },
-  {
-    "_id": "61c3f1747d291a607fc34298",
-    "age": 22,
-    "eyeColor": "brown",
-    "name": "Verna Casey",
-    "gender": "female",
-    "email": "vernacasey@illumity.com",
-    "phone": "+1 (959) 478-3021"
-  },
-  {
-    "_id": "61c3f174d77302d62afd5fef",
-    "age": 40,
-    "eyeColor": "green",
-    "name": "Hardin Mcleod",
-    "gender": "male",
-    "email": "hardinmcleod@illumity.com",
-    "phone": "+1 (876) 583-3383"
-  },
-  {
-    "_id": "61c3f17474d003c3379743db",
-    "age": 25,
-    "eyeColor": "brown",
-    "name": "Beach Sherman",
-    "gender": "male",
-    "email": "beachsherman@illumity.com",
-    "phone": "+1 (978) 569-2046"
-  },
-  {
-    "_id": "61c3f174cbe75c8192c9e6bb",
-    "age": 32,
-    "eyeColor": "brown",
-    "name": "Brenda Horne",
-    "gender": "female",
-    "email": "brendahorne@illumity.com",
-    "phone": "+1 (984) 474-3557"
-  },
-  {
-    "_id": "61c3f174660d40cc409c1236",
-    "age": 39,
-    "eyeColor": "brown",
-    "name": "Rosemary Bryan",
-    "gender": "female",
-    "email": "rosemarybryan@illumity.com",
-    "phone": "+1 (992) 552-3399"
-  },
-  {
-    "_id": "61c3f1746d1f52c9ee9650c6",
-    "age": 29,
-    "eyeColor": "blue",
-    "name": "Mcgowan Holden",
-    "gender": "male",
-    "email": "mcgowanholden@illumity.com",
-    "phone": "+1 (821) 466-3154"
-  }
-]
+      {
+        "_id": "61c3f17410c49b866484d59c",
+        "age": 23,
+        "eyeColor": "brown",
+        "name": "Kimberly Case",
+        "gender": "female",
+        "email": "kimberlycase@illumity.com",
+        "phone": "+1 (854) 561-3055"
+      },
+      {
+        "_id": "61c3f1743d1a7ed991b5a12d",
+        "age": 40,
+        "eyeColor": "green",
+        "name": "Amy Hopper",
+        "gender": "female",
+        "email": "amyhopper@illumity.com",
+        "phone": "+1 (840) 548-2913"
+      },
+      {
+        "_id": "61c3f1749200a1938233a7f8",
+        "age": 27,
+        "eyeColor": "green",
+        "name": "Adams Mcconnell",
+        "gender": "male",
+        "email": "adamsmcconnell@illumity.com",
+        "phone": "+1 (905) 429-3883"
+      },
+      {
+        "_id": "61c3f174be990e6fe46a3f60",
+        "age": 25,
+        "eyeColor": "green",
+        "name": "Banks Clark",
+        "gender": "male",
+        "email": "banksclark@illumity.com",
+        "phone": "+1 (971) 472-2099"
+      },
+      {
+        "_id": "61c3f1742f98ed58058941da",
+        "age": 31,
+        "eyeColor": "blue",
+        "name": "Kathleen Sears",
+        "gender": "female",
+        "email": "kathleensears@illumity.com",
+        "phone": "+1 (862) 541-2491"
+      },
+      {
+        "_id": "61c3f1745a0269486374d379",
+        "age": 27,
+        "eyeColor": "blue",
+        "name": "Rhea Dickson",
+        "gender": "female",
+        "email": "rheadickson@illumity.com",
+        "phone": "+1 (990) 419-3299"
+      },
+      {
+        "_id": "61c3f1744013a5fbadf69f66",
+        "age": 29,
+        "eyeColor": "brown",
+        "name": "Vega Roberts",
+        "gender": "male",
+        "email": "vegaroberts@illumity.com",
+        "phone": "+1 (816) 461-2237"
+      },
+      {
+        "_id": "61c3f174282a317719de3c18",
+        "age": 40,
+        "eyeColor": "green",
+        "name": "Willie Frederick",
+        "gender": "female",
+        "email": "williefrederick@illumity.com",
+        "phone": "+1 (901) 471-2181"
+      },
+      {
+        "_id": "61c3f174d05d25a44c1a39a7",
+        "age": 21,
+        "eyeColor": "blue",
+        "name": "Holt Shaffer",
+        "gender": "male",
+        "email": "holtshaffer@illumity.com",
+        "phone": "+1 (932) 515-2978"
+      },
+      {
+        "_id": "61c3f174a8de4391fe7fe48f",
+        "age": 24,
+        "eyeColor": "blue",
+        "name": "Wolf Oneill",
+        "gender": "male",
+        "email": "wolfoneill@illumity.com",
+        "phone": "+1 (807) 510-3358"
+      },
+      {
+        "_id": "61c3f174268ad25563a1cd79",
+        "age": 27,
+        "eyeColor": "brown",
+        "name": "Marietta Gregory",
+        "gender": "female",
+        "email": "mariettagregory@illumity.com",
+        "phone": "+1 (967) 577-2089"
+      },
+      {
+        "_id": "61c3f174741a531e2b0e76c4",
+        "age": 35,
+        "eyeColor": "brown",
+        "name": "Wheeler Potts",
+        "gender": "male",
+        "email": "wheelerpotts@illumity.com",
+        "phone": "+1 (975) 413-3410"
+      },
+      {
+        "_id": "61c3f1749c58129e3dbec6ab",
+        "age": 22,
+        "eyeColor": "brown",
+        "name": "Castro Wallace",
+        "gender": "male",
+        "email": "castrowallace@illumity.com",
+        "phone": "+1 (932) 457-2470"
+      },
+      {
+        "_id": "61c3f1748689fe16e22d1a9e",
+        "age": 34,
+        "eyeColor": "green",
+        "name": "Tia Mccarty",
+        "gender": "female",
+        "email": "tiamccarty@illumity.com",
+        "phone": "+1 (919) 424-3462"
+      },
+      {
+        "_id": "61c3f174ac1fd93093d1aff2",
+        "age": 35,
+        "eyeColor": "brown",
+        "name": "Martinez Lane",
+        "gender": "male",
+        "email": "martinezlane@illumity.com",
+        "phone": "+1 (877) 514-3178"
+      },
+      {
+        "_id": "61c3f17478d64dca2ef7480c",
+        "age": 20,
+        "eyeColor": "green",
+        "name": "Rhonda Hartman",
+        "gender": "female",
+        "email": "rhondahartman@illumity.com",
+        "phone": "+1 (964) 459-3187"
+      },
+      {
+        "_id": "61c3f174aad416365a48b317",
+        "age": 40,
+        "eyeColor": "blue",
+        "name": "Hodges Taylor",
+        "gender": "male",
+        "email": "hodgestaylor@illumity.com",
+        "phone": "+1 (821) 489-3597"
+      },
+      {
+        "_id": "61c3f17459ac26e01609ee47",
+        "age": 34,
+        "eyeColor": "brown",
+        "name": "Ellis Lester",
+        "gender": "male",
+        "email": "ellislester@illumity.com",
+        "phone": "+1 (838) 597-2785"
+      },
+      {
+        "_id": "61c3f17481b801ae824ba510",
+        "age": 35,
+        "eyeColor": "blue",
+        "name": "Contreras Cochran",
+        "gender": "male",
+        "email": "contrerascochran@illumity.com",
+        "phone": "+1 (913) 525-2063"
+      },
+      {
+        "_id": "61c3f174ab7bc75ae067b373",
+        "age": 36,
+        "eyeColor": "blue",
+        "name": "Billie Cash",
+        "gender": "female",
+        "email": "billiecash@illumity.com",
+        "phone": "+1 (828) 443-2214"
+      },
+      {
+        "_id": "61c3f1747d291a607fc34298",
+        "age": 22,
+        "eyeColor": "brown",
+        "name": "Verna Casey",
+        "gender": "female",
+        "email": "vernacasey@illumity.com",
+        "phone": "+1 (959) 478-3021"
+      },
+      {
+        "_id": "61c3f174d77302d62afd5fef",
+        "age": 40,
+        "eyeColor": "green",
+        "name": "Hardin Mcleod",
+        "gender": "male",
+        "email": "hardinmcleod@illumity.com",
+        "phone": "+1 (876) 583-3383"
+      },
+      {
+        "_id": "61c3f17474d003c3379743db",
+        "age": 25,
+        "eyeColor": "brown",
+        "name": "Beach Sherman",
+        "gender": "male",
+        "email": "beachsherman@illumity.com",
+        "phone": "+1 (978) 569-2046"
+      },
+      {
+        "_id": "61c3f174cbe75c8192c9e6bb",
+        "age": 32,
+        "eyeColor": "brown",
+        "name": "Brenda Horne",
+        "gender": "female",
+        "email": "brendahorne@illumity.com",
+        "phone": "+1 (984) 474-3557"
+      },
+      {
+        "_id": "61c3f174660d40cc409c1236",
+        "age": 39,
+        "eyeColor": "brown",
+        "name": "Rosemary Bryan",
+        "gender": "female",
+        "email": "rosemarybryan@illumity.com",
+        "phone": "+1 (992) 552-3399"
+      },
+      {
+        "_id": "61c3f1746d1f52c9ee9650c6",
+        "age": 29,
+        "eyeColor": "blue",
+        "name": "Mcgowan Holden",
+        "gender": "male",
+        "email": "mcgowanholden@illumity.com",
+        "phone": "+1 (821) 466-3154"
+      }
+    ];
+
+    var click = true;
+
+    function sort(key){
+      if(click) {
+        click = false;
+        let sortedData = jsonData.sort((a,b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ? 1 : 0)));
+        renderTable(sortedData);
+      } else {
+        click = true;
+        let sortedData = jsonData.sort((a,b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ? 1 : 0)));
+        renderTable(sortedData);
+      }
+    }
+
     function renderTable(data){
       let tableBodyData = [];
 
