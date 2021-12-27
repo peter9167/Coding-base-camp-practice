@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      border: 1px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+    $(function(){
+      $("#box1").hide(); //창 숨기기
+      $("#box2").hide();
+      $(".box").show();
+    });
+  </script>
+</head>
+<body>
+  <div id="box1" class="box">Box1</div>
+  <div id="box2" class="box">Box2</div>
+</body>
+</html>
