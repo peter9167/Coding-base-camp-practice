@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>032.html</title>
+</head>
+<body>
+  <button type="button" style="position:fixed; margin:100px"; onclick="f()" name="button">눌러!</button>
+  <div style='height:1168px; width:1500px; background-color:red;'>hello</div>
+  <div style='height:1000px; width:1500px; background-color:blue;'>hello</div>
+  <script>
+    //window
+    // window.alert('hello!');
+    // console.log(window); //window 요소(객체) 확인
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    function f(){
+      console.log(window.pageXOffset); //스크롤 X값 출력
+      console.log(window.pageYOffset); //스크롤 Y값 출력
+    }
+
+    // window.alert();
+    // window.open();
+    // window.print();
+  </script>
+</body>
+</html>
