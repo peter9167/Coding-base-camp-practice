@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .item-container {
+      margin: 20px;
+      padding: 20px;
+      display: flex;
+    }
+
+    .item-container .item {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    #item1 {
+      background-color: #fbffb9;
+    }
+
+    #item2 {
+      background-color: #ec7353;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+  <script>
+    $(function(){
+      // animate() - 애니메이션 효과 만드는 메서드
+      // 아래 링크를 통한 학습
+      // https://www.codingfactory.net/11820
+      $("#btn1").on("click", function(){
+        $("#item1").fadeOut();
+      });
+      $("#btn2").on("click", function(){
+        $("#item1").fadeIn();
+      });
+      $("#btn3").on("click", function(){
+        $("#item2").slideUp();
+      });
+      $("#btn4").on("click", function(){
+        $("#item2").slideDown();
+      });
+      $("#btn5").on("click", function(){
+        $("#item2").slideToggle();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="box1" class="item-container">
+    <div class="item" id="item1"><strong>Java</strong></div>
+    <div class="item" id="item2"><strong>Python</strong></div>
+  </div>
+  <div>
+    <button id="btn1">fadeOut</button>
+    <button id="btn2">fadeIn</button>
+    <button id="btn3">slideUp</button>
+    <button id="btn4">slideDown</button>
+    <button id="btn5">slideToggle</button>
+  </div>
+</body>
+</html>
