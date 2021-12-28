@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .item-container {
+      margin: 20px;
+      padding: 20px;
+      display: flex;
+    }
+
+    .item-container .item {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    #box1 {
+      border: 1px solid red;
+    }
+
+    #box2 {
+      border: 1px solid blue;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+  <script>
+    $(function(){
+      console.log($("#item1").html());
+
+      console.log($("#item1").text());
+
+      $("#item2").html("<strong>Swift</strong>"); // 변경(html)
+
+      $("#item3").text("kotlin"); // 변경(text)
+
+      $("#box2").append("<div class='item'>C#</div>"); // 추가
+
+      $("#item4").appendTo("#box2"); // 이동
+
+      $("#item5").clone().appendTo("#box2"); // 복사
+
+      $("#btn1").on("click", function(){
+        var result = $("#text1").val();
+        $("#result").text(result);
+      })
+    });
+  </script>
+</head>
+<body>
+  <div id="box1" class="item-container">
+    <div class="item" id="item1"><strong>Java</strong></div>
+    <div class="item" id="item2"><strong>Python</strong></div>
+    <div class="item" id="item3"><strong>Javascript</strong></div>
+    <div class="item" id="item4"><strong>Rudy</strong></div>
+    <div class="item" id="item5"><strong>C++</strong></div>
+  </div>
+  <div id="box2" class="item-container"></div>
+  <div>
+    <div>
+      <input type="text" id="text1">
+      <button id="btn1">클릭</button>
+    </div>
+    <div>
+      결과값 : <span id="result"></span>
+    </div>
+  </div>
+</body>
+</html>
