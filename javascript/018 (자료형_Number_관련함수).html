@@ -11,13 +11,14 @@
     let s = '10,000,000';
 
     document.write(`n : ${n} <br>`);
-    document.write(`n.toLocaleString() : ${n.toLocaleString()} <br>`);
+    document.write(`n.toLocaleString() : ${n.toLocaleString()} <br>`); // 숫자의 사용 언어에 따른 표현을 포함한 문자열을 반환
+    // 참고 toLocaleString(): http://www.devdic.com/javascript/refer/native/method:1344/toLocaleString()
     document.write(`n : ${s} <br>`);
-    document.write(`s.replace(/,/, '') : ${s.replace(/,/g, '')} <br>`);
-    document.write(`parseInt(s, 10) : ${parseInt(s, 10)} <br>`);
+    document.write(`s.replace(/,/, '') : ${s.replace(/,/g, '')} <br>`); // replace : 메서드는 어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환
+    document.write(`parseInt(s, 10) : ${parseInt(s, 10)} <br>`); // parseInt : 문자열 인자를 파싱하여 특정 진수(수의 진법 체계에서 기준이 되는 값)의 정수를 반환
     document.write(`n.toFixed(10) : ${n.toFixed(10)} <br>`); //toFixed : 소수점 나타내는 수
-    document.write(`nFloat.toFixed(3) : ${nFloat.toFixed(3)} <br>`);
-    document.write(`nFloat.toExponential(4) : ${nFloat.toExponential(4)} <br>`);
+    document.write(`nFloat.toFixed(3) : ${nFloat.toFixed(3)} <br>`); // toFixed : 숫자를 고정 소수점 표기법으로 표기해 반환
+    document.write(`nFloat.toExponential(4) : ${nFloat.toExponential(4)} <br>`); //숫자를 지수 표기법으로 표기해 반환
     document.write('////////////////////////////////////'+'<br>');
     document.write(`Number(true) : ${Number(true)} <br>`);
     document.write(`Number(false) : ${Number(false)} <br>`);
