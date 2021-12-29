@@ -26,27 +26,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script>
     $(function(){
-      var $imageList = $("#images-container img");
-      var $currentImage;
-      var $mainImageContainer = $("#main-image-container");
+      var $imageList = $("#images-container img"); //imageLIST : 이미지 값 대입
+      var $currentImage; // $currentImage 선언
+      var $mainImageContainer = $("#main-image-container"); //id main-image-container 값 대입
 
-      $imageList.on("click", function(){
-        if($currentImage && $currentImage.hasClass("selected")) {
-          $currentImage.removeClass("selected");
+      $imageList.on("click", function(){ // 이미지를 클릭했을 때
+        if($currentImage && $currentImage.hasClass("selected")) { // currentImage가 selected class를 가지고 있다면
+          $currentImage.removeClass("selected"); // selected class를 삭제(제거)
         }
 
-        $currentImage = $(this);
+        $currentImage = $(this); // 본 함수 값을 대입
 
-        $mainImageContainer.empty();
-        $currentImage.clone().appendTo($mainImageContainer);
+        $mainImageContainer.empty(); // mainImageContainer에 값을 비우기(clear)
+        $currentImage.clone().appendTo($mainImageContainer); // currentImage 복사(clone()) 후 mainImageContainer 값 더하기
 
-        $currentImage.addClass("selected");
+        $currentImage.addClass("selected"); // currentImage에 selected 클래스 추가
       });
     });
   </script>
 </head>
 <body>
-  <div id="main-image-container">
+  <div id="main-image-container"> <!--메인 이미지 출력-->
 
   </div>
 

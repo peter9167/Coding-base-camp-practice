@@ -20,28 +20,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script>
     $(function(){
-      $("#btn1").on("click", function(){
-        $("#box1").hide();
+      $("#btn1").on("click", function(){ //btn1을 클릭하면 함수 실행
+        $("#box1").hide(); // box1 숨기기
       });
 
-      $("#btn2").on("click", function(){
-        $("#box1").show();
+      $("#btn2").on("click", function(){ //btn2를 클릭하면 함수 실행
+        $("#box1").show(); // box1 보이기
       });
 
-      $("#btn3").on("click", function(){
-        $("#box2").hide();
+      $("#btn3").on("click", function(){ //btn3을 클릭하면 함수 실행
+        $("#box2").hide(); // box2 숨기기
       });
 
-      $("#btn4").on("click", function(){
-        $("#box2").show();
+      $("#btn4").on("click", function(){ //btn4를 클릭하면 함수 실행
+        $("#box2").show(); // box2 보이기
       });
 
-      $(".box").on("mouseenter", function() {
-        $(this).addClass("box-active");
+      $(".box").on("mouseenter", function() { //class box 위에 커서가 올라가면 함수 실행
+        $(this).addClass("box-active"); // this:본클래스(.box)에 box-active 클래스를 더하라(addClass)
       });
 
-      $(".box").on("mouseleave", function() {
-        $(this).removeClass("box-active");
+      $(".box").on("mouseleave", function() { //class box 위에 커서가 없다면 함수 실행
+        $(this).removeClass("box-active"); // this:본클래스(.box)에 box-active 클래스를 제거하라(removeClass)
       });
 
     });

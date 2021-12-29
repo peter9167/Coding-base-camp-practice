@@ -16,10 +16,10 @@
       $("#btn1").on("click", function(){
         var $target = $("#language thead");
 
-        if($target.hasClass("on")) {
-          $target.removeClass("on");
+        if($target.hasClass("on")) { // on 클래스를 가지고 있는지 체크
+          $target.removeClass("on"); // on 클래스 삭제(제거)
         } else{
-          $target.addClass("on");
+          $target.addClass("on"); // on 클래스 추가
         }
       });
     });
