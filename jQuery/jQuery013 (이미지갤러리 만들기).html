@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #main-image-container {
+      margin: 10px;
+      min-height: 500px;
+    }
+    #main-image-container img {
+      height: 500px;
+    }
+
+    #images-container img {
+      height: 150px;
+      margin: 10px;
+    }
+
+    .selected {
+      border: 3px solid red;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+    $(function(){
+      var $imageList = $("#images-container img");
+      var $currentImage;
+      var $mainImageContainer = $("#main-image-container");
+
+      $imageList.on("click", function(){
+        if($currentImage && $currentImage.hasClass("selected")) {
+          $currentImage.removeClass("selected");
+        }
+
+        $currentImage = $(this);
+
+        $mainImageContainer.empty();
+        $currentImage.clone().appendTo($mainImageContainer);
+
+        $currentImage.addClass("selected");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="main-image-container">
+
+  </div>
+
+  <div id="images-container">
+    <img src="img/1.jpg" />
+    <img src="img/2.jpg" />
+    <img src="img/3.jpg" />
+    <img src="img/4.jpg" />
+  </div>
+</body>
+</html>
