@@ -66,6 +66,7 @@ class 대표선출프로그램(QWidget):
     def close(self):
         return QCoreApplication.instance().quit()
 
-프로그램무한반복 = QApplication(sys.argv)
-실행인스턴스 = 대표선출프로그램()
-프로그램무한반복.exec_()
+프로그램무한반복 = QApplication(sys.argv) # 무한반복을 하기 위한 선언
+실행인스턴스 = 대표선출프로그램() # 대표선출프로그램 인스턴스 생성 하면서 클래스 구문 실행
+프로그램무한반복.exec_() # 본 구문을 통하여 클래스 코드 무한 동작
+# 만약 프로그램무한반복.exec_() 구문이 없다면 클래스 구문이 단 한 번밖에 실행되지 않음.
