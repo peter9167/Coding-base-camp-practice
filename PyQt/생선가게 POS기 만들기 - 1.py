@@ -39,7 +39,7 @@ class 생선가게POS기(QWidget):
         print(self.s)
 
     def calc(self):
-        print(eval(self.s))
+        print(eval(self.s)) # 각각의 연산 수식을 문자열로 받아 하나의 수식 문자열로 완성한 다음 eval이라는 내장함수(Built-in functions)를 사용해 문자열을 통한 수식 연산을 합
         self.s = ''
 
 
