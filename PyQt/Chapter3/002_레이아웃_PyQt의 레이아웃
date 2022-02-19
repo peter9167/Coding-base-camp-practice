@@ -1,0 +1,32 @@
+# 002 PyQt의 레이아웃
+
+- QtWidgets
+    - QBoxLayout
+    - QPlainTextDocumentLayout
+    - QStackedLayout
+    - QFormLayout
+    - QGraphicsAnchorLayout
+    - QGraphicsGridLayout
+    - QGraphicsLayout
+    - QGraphicsLayoutItem
+    - QGraphicsLinearLayout
+    - QGridLayout
+    - QHBoxLayout
+    - QVBoxLayout
+    - QLayout
+    - QLayoutItem
+- GUI
+    - QPageLayout
+    - QTextLayout
+
+대부분의 레이아웃 구조는 QWidget에 있습니다. 
+
+[QWidget - Qt for Python](https://doc.qt.io/qtforpython/PySide2/QtWidgets/QWidget.html)
+
+예를 들어 QHBoxLayout에 가면 아래처럼, QLayout을 상속받고 있는 것을 볼 수 있습니다.
+
+![출처 : [https://doc.qt.io/qtforpython/PySide2/QtWidgets/QHBoxLayout.html#qhboxlayout](https://doc.qt.io/qtforpython/PySide2/QtWidgets/QHBoxLayout.html#qhboxlayout)](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea9cc3ea-6aa9-45ff-9cf7-acd1cdb73809/Untitled.png)
+
+출처 : [https://doc.qt.io/qtforpython/PySide2/QtWidgets/QHBoxLayout.html#qhboxlayout](https://doc.qt.io/qtforpython/PySide2/QtWidgets/QHBoxLayout.html#qhboxlayout)
+
+따라서, 레이아웃을 전체적으로 살펴보고 싶다면, QLayout 문서를 참고하세요. 상속하고 있는 레이아웃은 아래와 같습니다.
