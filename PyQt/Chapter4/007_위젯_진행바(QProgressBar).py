@@ -13,7 +13,7 @@ class 진행바(QWidget):
     def UI초기화(self): 
         self.bar1 = QProgressBar(self) # QProgressBar 생성
         self.bar1.setOrientation(Qt.Vertical) 
-        self.bar1.setGeometry(50, 20, 50, 300)
+        self.bar1.setGeometry(50, 20, 50, 300) # (x, y, width, height)
 
         self.bar2 = QProgressBar(self)
         self.bar2.setGeometry(150,100,250,30)
@@ -44,7 +44,7 @@ class 진행바(QWidget):
         # - value 변수: 진행 상황 숫자
         # - valueChanged : 값이 변할 때 changeValue() 호출
 
-        self.setGeometry(300, 300, 400, 400)
+        self.setGeometry(300, 300, 450, 400)
         self.setWindowTitle('QProgressBar')
         self.show()
 
