@@ -20,8 +20,8 @@ class 탭버튼위젯(QWidget):
         tabs.addTab(self.tab1,'라이캣')
         tabs.addTab(self.tab2,'파이')
         tabs.addTab(self.tab3,'썬')
-        tabs.setTabPosition(1) 
-        tabs.setTabShape(1) 
+        tabs.setTabPosition(1)  # 탭이 표시되는 방향을 뜻함. 아래 주석 참고
+        tabs.setTabShape(1)     # 모서리 둥글게 
 
         tabs.tabBarClicked.connect(self.clickedTab)
         vbox = QVBoxLayout()
