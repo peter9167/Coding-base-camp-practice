@@ -11,18 +11,18 @@ class 시그널슬롯동작(QWidget):
         
 
     def UI초기화(self):
-        self.count = 0 
-        btn = QPushButton('클릭')
-        btn.clicked.connect(self.changeLabel) 
+        self.count = 0 # count 변수 생성
+        btn = QPushButton('클릭') # 버튼 생성
+        btn.clicked.connect(self.changeLabel) # clicked 클릭시  시그널을 보내고 정의된 self.changeLabel(슬롯)에 보내어 이벤트를 처리
 
         self.label = QLabel(f"{self.count} 번 눌렸습니다.")
         # - count 변수는 버튼 클릭시 값이 증가하기 위해 self.count로 선언
         # - clicked 클릭시  시그널을 보내고 정의된 self.changeLabel(슬롯)에 보내어 이벤트를 처리
 
-        vbox = QVBoxLayout()
-        vbox.addWidget(self.label)
-        vbox.addWidget(btn)
-        self.setLayout(vbox)
+        vbox = QVBoxLayout() # 레이아웃 생성
+        vbox.addWidget(self.label) # 위젯 추가
+        vbox.addWidget(btn) # 위젯 추가
+        self.setLayout(vbox) # 전체 레이아웃에 설정
       
         self.setGeometry(300, 300, 400, 200)
         self.setWindowTitle('Signal and Slot')
