@@ -1,0 +1,97 @@
+# 004 부록) Pyinstaller를 사용하여 프로그램 만들기
+
+# 1. Pyinstaller이란?
+
+> PyInstaller freezes (packages) Python applications into stand-alone executables, under Windows, GNU/Linux, Mac OS X, FreeBSD, Solaris and AIX.
+> 
+
+Windows, MAC, Linux 등 운영체제에서 Python 애플리케이션을 독립실행형 파일 ex) .exe 로 만들어 주는 라이브러리 입니다.
+
+즉, 우리가 사용할 실행파일을 생성해주는 것이죠!
+
+[PyInstaller Quickstart - PyInstaller bundles Python applications](https://www.pyinstaller.org/)
+
+Pyinstaller 공식 홈페이지
+
+# 2. Pyinstaller 설치
+
+```python
+pip install pyinstaller 
+```
+
+![설치 과정](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70bcb3e2-78e7-4a88-b26b-80e31c4ed62d/Untitled.png)
+
+설치 과정
+
+# 3. Pyinstaller 사용법
+
+## 기본 방식
+
+```python
+pyinstaller {파이썬 파일.py} 
+```
+
+**파이썬 파일.py이 존재하는 폴더에서 위 코드를 실행하면 각 OS에 맞는 실행파일을 포함한 여러가지 폴더들이 만들어집니다.**
+
+## 옵션을 주는 방식
+
+```python
+pyinstaller {옵션} {파이썬 파일.py} 
+```
+
+### 가장 많이 사용하는 옵션들
+
+1. --onefile : 하나의 실행파일로 생성
+2. --noconsole : 실행파일을 누르면 콘솔창이 뜨지 않음
+
+[Using PyInstaller - PyInstaller 4.0 documentation](https://pyinstaller.readthedocs.io/en/stable/usage.html)
+
+이외의 여러가지 옵션
+
+# 4. 생선가게 POS기-3 실행파일 만들기
+
+[005 생선가게 POS기 만들기 - 3](https://www.notion.so/005-POS-3-93aa33148e024975bec35770553fe5c0)
+
+**코드는 위 페이지를 참고해주시길 바랍니다.**
+
+### (1) 옵션 없이 실행파일 만들기
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff5b2431-e1bd-4c1a-84d2-77151b2225ac/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff5b2431-e1bd-4c1a-84d2-77151b2225ac/Untitled.png)
+
+중략...
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b8471166-7b71-474f-a23c-fe18b7e021a1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b8471166-7b71-474f-a23c-fe18b7e021a1/Untitled.png)
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/875afba1-5100-4ec1-8383-f3e27ebfdba1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/875afba1-5100-4ec1-8383-f3e27ebfdba1/Untitled.png)
+
+**실행 후 폴더 결과 화면**
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26d562de-fab0-48ad-8d0c-e173d5313286/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26d562de-fab0-48ad-8d0c-e173d5313286/Untitled.png)
+
+**작업폴더 → dist → 파일이름.exe 생성 확인**
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa7d1901-c88f-472f-adbf-77f1c857846d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa7d1901-c88f-472f-adbf-77f1c857846d/Untitled.png)
+
+실행 결과 : 실행시 콘솔 창과 함께 실행됩니다.
+
+**기본적으로 Pyinstaller는 코드에서 사용했던 여러가지 라이브러리들을 포함하여 하나의 디렉토리를 만들어 줍니다.**
+
+## (2) 옵션을 통한 콘솔창이 나오지 않는 단일 실행파일 만들기
+
+```python
+pyinstaller --noconsole --onefile 파일이름
+```
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08e15954-002f-409e-ba8a-fb9527537a73/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08e15954-002f-409e-ba8a-fb9527537a73/Untitled.png)
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d5373a3-eb1e-4df1-acf3-36f7c39e5aa0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d5373a3-eb1e-4df1-acf3-36f7c39e5aa0/Untitled.png)
+
+**실행 후 dist 폴더 결과 화면**
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/024ba7e1-50b8-4c90-a270-d1f6ace27fb7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/024ba7e1-50b8-4c90-a270-d1f6ace27fb7/Untitled.png)
+
+**위와 같이 콘솔창이 안나오는것을 확인 할 수 있습니다.**
+
+## 5. (1)번과 (2)번 방법의 차이점은?
+
+**(2번)은 단일 파일로 구성되기 때문에 파일의 용량이 높은 반면, (1번)은 import 했던 라이브러리들을 분산하였기 때문에 용량이 적습니다.**

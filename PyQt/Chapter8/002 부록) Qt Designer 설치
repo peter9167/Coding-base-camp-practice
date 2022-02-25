@@ -1,0 +1,42 @@
+# 002 부록) Qt Designer 설치
+
+## 개요
+
+**Qt Designer는 Qt Widget(layout,QLabel 등)으로 GUI를 디자인하고 만들 수 있는 도구입니다.**
+
+**지금 까지 했던 대부분의 슬롯,코드,위젯 추가와 같은 코드와 이벤트를 이 프로그램을 통해 구현할 수 있습니다!**
+
+## 설치
+
+<aside>
+🛠 **pip3 install pyqt5-tools**
+
+</aside>
+
+기본적으로 pip를 통해 라이브러리가 설치되면
+
+**C:\Users\{사용자 이름}\AppData\Local\Programs\Python\Python38(파이썬 버전)\Lib\site-packages 아래에 설치**
+
+### Qt Designer 실행
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14d8e4f6-2e83-40cb-b824-98969d301873/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14d8e4f6-2e83-40cb-b824-98969d301873/Untitled.png)
+
+cmd → **designer.exe 입력**
+
+> This application failed to start because no Qt platform plugin could be initialized.
+Reinstalling the applicaiotn may fix this problem.
+> 
+
+프로그램 실행시 위와 같은 문구의 에러가 난다면
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c612c79-52db-4873-92dc-15f314f7687f/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c612c79-52db-4873-92dc-15f314f7687f/Untitled.png)
+
+**C:\Users\{사용자 이름}\AppData\Local\Programs\Python\{파이썬 버전}\Lib\site-packages\PyQt5\Qt\plugins 에 있는 platforms 폴더를 복사하여**
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/752e988e-9f84-4b3c-943c-eaf7651b47d3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/752e988e-9f84-4b3c-943c-eaf7651b47d3/Untitled.png)
+
+**C:\Users\{사용자 이름}\AppData\Local\Programs\Python\{파이썬 버전}\Lib\site-packages\pyqt5_tools\Qt\plugins 에 덮어쓰기 합니다.**
+
+## 실행 결과
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70f59d86-c9fc-4497-b692-aec3c8046b48/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70f59d86-c9fc-4497-b692-aec3c8046b48/Untitled.png)
